@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#073d2b">
+<title>عبدالنور | تطبيق إسلامي</title>
+
+<style>
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+ margin:0;font-family:Tahoma,Arial,sans-serif;
+ background:#f5f7f2;color:#243b30;
+ line-height:1.9;transition:.3s
+}
+header{
+ background:linear-gradient(135deg,#073d2b,#167b53);
+ color:white;text-align:center;padding:35px 15px;
+ border-bottom:4px solid #d6b65e
+}
+header h1{font-size:38px;margin:0;color:#f1d98e}
+header p{margin:5px}
+nav{
+ background:white;display:flex;justify-content:center;
+ flex-wrap:wrap;gap:5px;padding:12px;
+ position:sticky;top:0;z-index:10;
+ box-shadow:0 2px 10px #0001
+}
+nav a{
+ text-decoration:none;color:#126b49;
+ padding:7px 11px;border-radius:20px;font-size:13px
+}
+nav a:hover{background:#126b49;color:white}
+.container{max-width:1050px;margin:auto;padding:18px}
+.hero{
+ background:linear-gradient(135deg,#0b5038,#167b53);
+ color:white;text-align:center;padding:40px 20px;
+ border-radius:18px;margin-top:20px
+}
+.hero h2{color:#f1d98e;font-size:27px}
+.card{
+ background:white;padding:22px;margin:18px 0;
+ border-radius:15px;box-shadow:0 3px 15px #0000000b;
+ border-right:4px solid #c8a44d
+}
+.card h2{color:#126b49;margin-top:0}
+.verse{
+ background:#f1f6ee;padding:25px;text-align:center;
+ font-size:23px;color:#14563b;border-radius:12px
+}
+.arabic{font-size:22px;color:#146444;text-align:center}
+button{
+ border:0;background:#126b49;color:white;
+ padding:11px 20px;border-radius:9px;
+ cursor:pointer;font-size:15px;margin:5px
+}
+button:hover{background:#073d2b}
+.counter{font-size:55px;color:#126b49;text-align:center}
+footer{
+ background:#073d2b;color:white;text-align:center;
+ padding:25px;margin-top:35px
+}
+section{scroll-margin-top:90px}
+.dark{background:#101b16;color:#eee}
+.dark .card,.dark nav{background:#1d3027;color:white}
+.dark .card h2,.dark nav a{color:#e9d18c}
+.dark .verse{background:#263d31;color:white}
+.dark .arabic{color:#a9dfbd}
+.dark nav a:hover{background:#126b49;color:white}
+.dark .hero{background:#183f30}
+input{
+ padding:12px;border:1px solid #ddd;
+ border-radius:8px;width:100%;font-size:16px
+}
+</style>
+
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#4b6cb7">
+<link rel="apple-touch-icon" href="icon.png"></head>
+
+<body>
+
+<header>
+<h1>☪ عبدالنور</h1>
+<p>نور طريقك إلى الله</p>
+<p>بالذكر تحيا القلوب وتطمئن النفوس</p>
+</header>
+
+<nav>
+<a href="#home">الرئيسية</a>
+<a href="#quran">القرآن</a>
+<a href="#hadith">الأحاديث</a>
+<a href="#advice">المواعظ</a>
+<a href="#stories">القصص</a>
+<a href="#dua">الأدعية</a>
+<a href="#tasbih">المسبحة</a>
+<a href="#tawba">التوبة</a>
+</nav>
+
+<div class="container">
+
+<section id="home" class="hero">
+<h2>السلام عليكم ورحمة الله وبركاته</h2>
+<h3>مرحباً بك في عبدالنور</h3>
+<p>مساحة إيمانية تذكّرك بالله وتساعدك على التقرب منه.</p>
+<p>﴿ أَلَا بِذِكْرِ اللَّهِ تَطْمَئِنُّ الْقُلُوبُ ﴾</p>
+<button onclick="daily()">موعظة اليوم</button>
+<button onclick="toggleDark()">🌙 الوضع الليلي</button>
+</section>
+
+<section id="quran" class="card">
+<h2>📖 القرآن الكريم</h2>
+<div class="verse">
+﴿ إِنَّ مَعَ الْعُسْرِ يُسْرًا ﴾
+<br><small>سورة الشرح – الآية 6</small>
+</div>
+<p>اجعل القرآن رفيق يومك، واقرأ منه ولو صفحة واحدة.</p>
+<p>تذكّر أن القرآن نور للقلب وهداية للروح.</p>
+</section>
+
+<section id="hadith" class="card">
+<h2>🌿 أحاديث نبوية</h2>
+<p class="arabic">
+قال رسول الله ﷺ:
+«إنما الأعمال بالنيات، وإنما لكل امرئ ما نوى»
+</p>
+<p>رواه البخاري ومسلم.</p>
+<hr>
+<p class="arabic">
+قال رسول الله ﷺ:
+«الكلمة الطيبة صدقة»
+</p>
+<p>متفق عليه.</p>
+<hr>
+<p class="arabic">
+قال رسول الله ﷺ:
+«لا تغضب»
+</p>
+<p>رواه البخاري.</p>
+</section>
+
+<section id="advice" class="card">
+<h2>❤️ مواعظ تهز القلب</h2>
+
+<h3>1. لا تؤجل التوبة</h3>
+<p>لا تقل غداً أتوب، فالموت لا ينتظر أحداً.
+ارجع إلى الله اليوم قبل أن يأتي يوم لا ينفع فيه الندم.</p>
+
+<h3>2. حافظ على صلاتك</h3>
+<p>الصلاة ليست عبئاً على حياتك، بل هي صلتك بربك.
+لا تتركها مهما كثرت مشاغلك.</p>
+
+<h3>3. لا تيأس من رحمة الله</h3>
+<p>مهما كثرت ذنوبك، ومهما أخطأت، لا تقنط من رحمة الله.
+تب إليه بصدق.</p>
+
+<h3>4. بر الوالدين</h3>
+<p>لا تنس من سهرا على راحتك، وادع لهما دائماً،
+وأحسن إليهما قبل فوات الأوان.</p>
+
+<h3>5. لا تظلم أحداً</h3>
+<p>الدنيا قصيرة، فلا تجعل مالاً أو غضباً سبباً في ظلم إنسان.
+حقوق العباد عظيمة.</p>
+
+<h3>6. تذكر الموت</h3>
+<p>سيأتي يوم تنتهي فيه كل مشاغل الدنيا،
+ويبقى عملك الصالح وما قدمت لنفسك.</p>
+</section>
+
+<section id="stories" class="card">
+<h2>📚 قصص الأنبياء والعبر</h2>
+
+<h3>قصة يوسف عليه السلام</h3>
+<p>تعرض يوسف عليه السلام للظلم وفقد أهله ودخل السجن،
+لكنه صبر وثبت على الإيمان، حتى جعل الله له فرجاً ومكانة.</p>
+<p><b>العبرة:</b> لا تفقد الأمل، فقد يأتي الفرج بعد أشد الابتلاء.</p>
+
+<hr>
+<h3>قصة موسى عليه السلام</h3>
+<p>عندما وصل موسى عليه السلام ومن معه إلى البحر،
+وظن الناس أنهم أدركوا، وثق موسى بربه وقال:
+﴿ كَلَّا إِنَّ مَعِيَ رَبِّي سَيَهْدِينِ ﴾.</p>
+<p><b>العبرة:</b> ثق بالله حتى في أصعب الظروف.</p>
+
+<hr>
+<h3>قصة أصحاب الكهف</h3>
+<p>فتية آمنوا بالله وثبتوا على دينهم،
+فآواهم الله إلى الكهف وحفظهم.</p>
+<p><b>العبرة:</b> الثبات على الحق يحتاج شجاعة وتوكلاً على الله.</p>
+</section>
+
+<section id="dua" class="card">
+<h2>🤲 أدعية</h2>
+<p class="arabic">اللهم اغفر لي وارحمني واهدني وعافني وارزقني.</p>
+<hr>
+<p class="arabic">ربنا آتنا في الدنيا حسنة وفي الآخرة حسنة وقنا عذاب النار.</p>
+<hr>
+<p class="arabic">يا مقلب القلوب ثبت قلبي على دينك.</p>
+<hr>
+<p class="arabic">اللهم إني أسألك العفو والعافية في الدنيا والآخرة.</p>
+<hr>
+<p class="arabic">اللهم ارزقني راحة البال وطمأنينة القلب وحسن الخاتمة.</p>
+</section>
+
+<section id="tasbih" class="card">
+<h2>📿 المسبحة الإلكترونية</h2>
+<p style="text-align:center">اختر الذكر ثم ابدأ التسبيح</p>
+
+<select id="zikr" onchange="resetCount()" style="width:100%;padding:12px;border-radius:8px">
+<option>سبحان الله</option>
+<option>الحمد لله</option>
+<option>الله أكبر</option>
+<option>أستغفر الله</option>
+<option>لا إله إلا الله</option>
+<option>لا حول ولا قوة إلا بالله</option>
+<option>اللهم صل وسلم على نبينا محمد</option>
+</select>
+
+<div class="counter" id="count">0</div>
+<p id="currentZikr" class="arabic">سبحان الله</p>
+<div style="text-align:center">
+<button onclick="increment()">تسبيح +</button>
+<button onclick="resetCount()">إعادة العداد</button>
+</div>
+</section>
+
+<section id="tawba" class="card">
+<h2>💚 التوبة والاستغفار</h2>
+<div class="verse">
+﴿ قُلْ يَا عِبَادِيَ الَّذِينَ أَسْرَفُوا
+عَلَى أَنْفُسِهِمْ لَا تَقْنَطُوا مِنْ
+رَحْمَةِ اللَّهِ إِنَّ اللَّهَ يَغْفِرُ
+الذُّنُوبَ جَمِيعًا ﴾
+<br><small>سورة الزمر – الآية 53</small>
+</div>
+<h3>شروط التوبة النصوح:</h3>
+<ul>
+<li>الإقلاع عن الذنب.</li>
+<li>الندم على ما فات.</li>
+<li>العزم على عدم العودة إليه.</li>
+<li>رد الحقوق إلى أصحابها إن تعلق الذنب بحقوق العباد.</li>
+</ul>
+</section>
+
+<section class="card">
+<h2>⭐ موعظة اليوم</h2>
+<p id="dailyText" class="arabic">لا تجعل الدنيا أكبر همك، واجعل رضا الله غايتك.</p>
+<div style="text-align:center">
+<button onclick="daily()">موعظة جديدة</button>
+</div>
+</section>
+
+</div>
+
+<footer>
+<h2>☪ عبدالنور</h2>
+<p>نور طريقك إلى الله</p>
+<p>اللهم اجعل هذا العمل خالصاً لوجهك الكريم.</p>
+<p>اللهم ارزقنا حسن الخاتمة والجنة.</p>
+</footer>
+
+<script>
+let count=0;
+
+function increment(){
+ count++;
+ document.getElementById('count').textContent=count;
+ document.getElementById('currentZikr').textContent=
+ document.getElementById('zikr').value;
+}
+
+function resetCount(){
+ count=0;
+ document.getElementById('count').textContent=count;
+ document.getElementById('currentZikr').textContent=
+ document.getElementById('zikr').value;
+}
+
+function toggleDark(){
+ document.body.classList.toggle('dark');
+}
+
+const advices=[
+"لا تجعل الدنيا أكبر همك، واجعل رضا الله غايتك.",
+"إذا ضاقت بك الدنيا، فالجأ إلى الله بالدعاء.",
+"أحسن إلى والديك، فبرهما من أعظم أبواب الخير.",
+"استغفر الله في يومك، فكلنا نحتاج إلى المغفرة.",
+"لا تحكم على الناس، فكل إنسان له قصة.",
+"من أصلح ما بينه وبين الله أصلح الله ما بينه وبين الناس.",
+"ابتسم في وجه أخيك، فالكلمة الطيبة صدقة.",
+"لا تترك الصلاة مهما كانت ظروفك.",
+"كن رحيماً، فالرحمة من أعظم الأخلاق.",
+"تذكر أن الدنيا دار ابتلاء والآخرة دار جزاء.",
+"سامح من أخطأ في حقك، واطلب من الله أن يصلح قلبك.",
+"لا تيأس من دعاء لم يتحقق بعد، فلله حكمة في كل شيء."
+];
+
+function daily(){
+ let i=Math.floor(Math.random()*advices.length);
+ document.getElementById('dailyText').textContent=advices[i];
+}
+</script>
+
+
+<script>if('serviceWorker' in navigator){window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js'));}</script>
+</body>
+</html>
